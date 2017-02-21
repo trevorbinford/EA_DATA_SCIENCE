@@ -1,0 +1,66 @@
+
+> setwd("~/EA Data Science/DATA-20170216T184047Z/DATA") #-->this was for my wd, you'll need to set to the wd where the data folder is contained
+
+> temp = list.files(pattern="*.xlsx")
+
+> temp
+[1] "Copy of Events in Giving What We Can- Cambridge 14_15.xlsx"     
+[2] "Copy of GWWC_80k events Attendance Model.xlsx"                  
+[3] "Copy of GWWC_80k Events Checklist _ Record of Events 15_16.xlsx"
+[4] "Copy of GWWC_80k Events Checklist _ Record of Events 16_17.xlsx"
+
+> setwd("~/EA Data Science/DATA-20170216T184047Z/DATA/2014")
+
+> temp_2014 = list.files(pattern="*.xlsx")
+
+> temp_2014
+[1] "Copy of Brooks 80k.xlsx"                                    
+[2] "Copy of Feedback forms Greg Lewis 80k.xlsx"                 
+[3] "Copy of Goldring Joint Event.xlsx"                          
+[4] "Copy of NGO Panel 80k.xlsx"                                 
+[5] "Copy of Questionnaire results from Giving Game 1st Feb.xlsx"
+
+> setwd("~/EA Data Science/DATA-20170216T184047Z/DATA/2015")
+
+> temp_2015 = list.files(pattern="*.xlsx")
+
+> temp_2015
+[1] "Copy of Copy of Feedback all events.xlsx"
+
+> #Please note that a word doc exists in 2015 collecting Likes and Dislikes information that I have not shown
+> # --> We should investigate that soon  .... [TRUNCATED] 
+
+> temp_Michaelmas_2016 = list.files(pattern="*.xlsx")
+
+> temp_Michaelmas_2016
+ [1] "Copy of Copy of Animal Panel Feedback Forms.xlsx"                           
+ [2] "Copy of Copy of Copy of Feedback Forms Jon Snow 2016_.xlsx"                 
+ [3] "Copy of Copy of David Goldberg Feedback Forms 2016.xlsx"                    
+ [4] "Copy of Copy of Feedback Forms Alan Fenwick 2016_.xlsx"                     
+ [5] "Copy of Copy of Feedback forms Alex Rees 2016.xlsx"                         
+ [6] "Copy of Copy of Feedback Forms Andrew Mace 2016.xlsx"                       
+ [7] "Copy of Copy of Feedback Forms Joanna Natesegara 2016.xlsx"                 
+ [8] "Copy of Copy of Feedback Forms Jon Snow 2016_.xlsx"                         
+ [9] "Copy of Copy of Feedback Forms Michaelmas 2016 Discussion group series.xlsx"
+[10] "Copy of Copy of Feedback Forms Peter Singer 2016.xlsx"                      
+[11] "Copy of Copy of Feedback Forms Pledge Panel 2016.xlsx"                      
+[12] "Copy of Copy of Feedback Forms Roy Head 2016.xlsx"                          
+
+> setwd("~/EA Data Science/DATA-20170216T184047Z/DATA/Lent 2017")
+
+> temp_Lent_2017 = list.files(pattern="*.xlsx")
+
+> temp_Lent_2017
+[1] "Copy of Copy of Feedback - 1hr career workshop at climate forum.xlsx"
+[2] "Copy of Copy of Feedback Forms Alan Rusbriger (CUS).xlsx"            
+
+> #end of main content
+> setwd("~/EA Data Science")
+
+> sink.reset <- function(){
++   for(i in seq_len(sink.number())){
++   sink(NULL)
++  }
++ }
+
+> sink.reset()
